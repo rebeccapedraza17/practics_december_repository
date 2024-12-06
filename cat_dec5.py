@@ -7,44 +7,35 @@ panel = DrawingPanel.DrawingPanel(700,700)
 
 # Cat figure
 def cat_head():
-    panel.fill_oval(200,200,300,300,"orange") # Head of the cat
+    panel.fill_oval(200,200,320,320,"orange") # Head of the cat
 
 def cat_eyes():
-    # Left eye 
     panel.fill_oval(240, 240, 70, 70,"white")  
-    # Right eye 
     panel.fill_oval(390, 240, 70, 70,"white")
-    # Left pupil 
-    panel.fill_oval(255, 255, 30, 30,"black")
-    # Right pupil 
-    panel.fill_oval(405, 255, 30, 30,"black")
+    panel.fill_oval(270, 250, 15, 50,"black")
+    panel.fill_oval(420, 250, 15, 50,"black")
+    panel.set_color("black")
    
 def cat_nose():
-    panel.fill_oval(315,330,30,30,"pink")
+    panel.fill_polygon(330, 370, 350, 390, 310, 390, fill="pink", outline="black")
 
 def cat_whiskers():
-    # Left side
-    panel.draw_line(220, 330, 150, 340)
-    panel.draw_line(220, 340, 150, 350)
-    panel.draw_line(220, 350, 150, 360)
-    # Right side
-    panel.draw_line(440, 330, 510, 340)
-    panel.draw_line(440, 340, 510, 350)
-    panel.draw_line(440, 350, 510, 360)
+    panel.draw_line(300, 380, 200, 370)
+    panel.draw_line(300, 390, 200, 390)
+    panel.draw_line(300, 400, 200, 410)
+    panel.draw_line(360, 380, 460, 370)
+    panel.draw_line(360, 390, 460, 390)
+    panel.draw_line(360, 400, 460, 410)
     
-def cat_mouth():
-    # Left mouth 
+def cat_mouth(): 
     panel.set_color("black")
-    panel.draw_line(330, 340, 270, 380)
-    # Right mouth 
-    panel.draw_line(330, 340, 390, 380)
+    panel.draw_line(330, 390, 310, 410)
+    panel.draw_line(330, 390, 350, 410)
 
 def cat_ears():
-    # Left ear
-    panel.fill_polygon(200, 170, 240, 100,"orange")
-    # Right ear 
-    panel.fill_polygon(500, 460, 460, 170,"orange")
-
+    panel.fill_polygon(270, 140, 320, 200, 220, 200, fill="orange", outline="black")   
+    panel.fill_polygon(430, 140, 480, 200, 380, 200, fill="orange", outline="black")
+    
 # Draw cat
 cat_head()
 cat_eyes()
