@@ -2,6 +2,7 @@
 # Dec 6
 
 import DrawingPanel
+import time 
 
 panel = DrawingPanel.DrawingPanel(800,600)
 
@@ -35,4 +36,8 @@ def animate_car():
 animate_car()
 
 def draw_cactus():
-    panel.fill_(
+    panel.fill_rect(600, 400, 20, 40, "green")  
+    panel.fill_rect(590, 370, 20, 30, "green")  
+    panel.fill_rect(610, 370, 20, 30, "green")  
+    panel.fill_oval(590, 460, 40, 40, "brown")  
+draw_cactus()
