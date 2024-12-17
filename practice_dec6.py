@@ -1,18 +1,20 @@
 # Rebecca Pedraza
-# Dec 6
+# Dec
+# Animate car
 
 import DrawingPanel
-import time 
+import time
 
-panel = DrawingPanel.DrawingPanel(800,600)
-
-def draw_sun():
-    panel.fill_oval(90, 90, 100, 100,"orange")
-draw_sun()
+panel = DrawingPanel.DrawingPanel(800, 600)
 
 def draw_background():
-    panel.fill_rect(0, 450, 800, 500, "green")
+    panel.fill_rect(0, 450, 800, 500, "green")  
+    panel.fill_rect(0, 0, 800, 450, "skyblue")  
 draw_background()
+
+def draw_sun():
+    panel.fill_oval(90, 90, 100, 100, "dark orange")
+draw_sun()
 
 def draw_clouds():
     panel.fill_oval(550, 90, 100, 100, "light blue")
@@ -41,15 +43,7 @@ def draw_car(x):
 draw_car()
 
 def animate_car():
-      for i in range(100):  
-        draw_car(i * 5, 400)  
-        time.sleep(20)
-animate_car()
-
-'''
-def animate_car():
-for i in range(100):
-bg()
-draw_car(i*5,400)
-.sleep(20)
-'''
+    for i in range(100):
+        draw_car(i * 5)  
+        time.sleep(0.05) 
+animate_car()  
